@@ -1,11 +1,32 @@
 <section class="vv-sheet">
 
   <header class="vv-header">
-    <div class="vv-logo-row">
-      <div class="vv-logo-text">VILLAINS &amp; VIGILANTES</div>
+
+    <h1 class="vv-record-title">CHARACTER RECORD SHEET</h1>
+
+    <div class="vv-header-visuals">
+
+      <div class="vv-actor-image">
+        <img
+          src="{{actor.img}}"
+          alt="{{actor.name}}"
+          title="Change Character Image"
+          data-action="editImage"
+        >
+      </div>
+
+      <div class="vv-logo-container">
+        <img
+          src="systems/villains-and-vigilantes/assets/villains-and-vigilantes-logo.png"
+          alt="Villains and Vigilantes"
+          class="vv-logo"
+        >
+      </div>
+
     </div>
 
     <div class="vv-header-grid">
+
       <div class="vv-field vv-span-2">
         <label>IDENTITY:</label>
         <input
@@ -104,18 +125,20 @@
         <label>AGILITY MOD.:</label>
         <span>—</span>
       </div>
+
     </div>
+
   </header>
 
-
   <section class="vv-powers-section">
-    <h2>POWERS:</h2>
+
+    <h2 class="vv-section-heading">POWERS:</h2>
 
     <div class="vv-powers-placeholder">
-      <!-- Power Items will be rendered here in a later development phase. -->
+      <!-- Embedded Power Items will appear here later. -->
     </div>
-  </section>
 
+  </section>
 
   <section class="vv-three-column-section">
 
@@ -189,17 +212,19 @@
           <label>EVIL:</label>
           <span>—</span>
         </div>
+
       </div>
     </div>
-
 
     <div class="vv-column vv-combat">
       <h2>COMBAT / RESOURCES</h2>
 
       <div class="vv-primary-resource">
+
         <div class="vv-primary-resource-title">HIT POINTS</div>
 
         <div class="vv-resource-values">
+
           <div class="vv-resource-value">
             <label>MAX:</label>
             <input
@@ -221,13 +246,16 @@
               step="1"
             >
           </div>
+
         </div>
       </div>
 
       <div class="vv-primary-resource">
+
         <div class="vv-primary-resource-title">POWER</div>
 
         <div class="vv-resource-values">
+
           <div class="vv-resource-value">
             <label>MAX:</label>
             <input
@@ -249,10 +277,12 @@
               step="1"
             >
           </div>
+
         </div>
       </div>
 
       <div class="vv-hit-mod-block">
+
         <div class="vv-hit-mod-title">HIT MOD.</div>
 
         <div class="vv-hit-mod-values">
@@ -263,6 +293,7 @@
           <span>=</span>
           <strong>—</strong>
         </div>
+
       </div>
 
       <div class="vv-static-row">
@@ -289,13 +320,14 @@
         <label>BASIC HTH DAMAGE:</label>
         <span>—</span>
       </div>
-    </div>
 
+    </div>
 
     <div class="vv-column vv-other-stats">
       <h2>OTHER STATISTICS</h2>
 
       <div class="vv-movement-block">
+
         <label>MOVEMENT RATES:</label>
 
         <div class="vv-base-movement">
@@ -305,6 +337,7 @@
         <textarea
           name="system.movement.additional"
         >{{system.movement.additional}}</textarea>
+
       </div>
 
       <div class="vv-static-row">
@@ -364,10 +397,10 @@
           step="1"
         >
       </div>
+
     </div>
 
   </section>
-
 
   <section class="vv-large-text-section">
     <h2>ORIGIN AND BACKGROUND:</h2>
@@ -375,8 +408,8 @@
     <textarea
       name="system.biography.originAndBackground"
     >{{system.biography.originAndBackground}}</textarea>
-  </section>
 
+  </section>
 
   <section class="vv-large-text-section">
     <h2>OTHER INFORMATION:</h2>
@@ -384,6 +417,7 @@
     <textarea
       name="system.biography.otherInformation"
     >{{system.biography.otherInformation}}</textarea>
+
   </section>
 
 </section>
