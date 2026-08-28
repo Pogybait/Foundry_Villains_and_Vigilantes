@@ -1,9 +1,389 @@
-<section class="vv-character-sheet">
-  <header>
-    <h1>{{actor.name}}</h1>
+<section class="vv-sheet">
+
+  <header class="vv-header">
+    <div class="vv-logo-row">
+      <div class="vv-logo-text">VILLAINS &amp; VIGILANTES</div>
+    </div>
+
+    <div class="vv-header-grid">
+      <div class="vv-field vv-span-2">
+        <label>IDENTITY:</label>
+        <input
+          type="text"
+          name="system.identity.value"
+          value="{{system.identity.value}}"
+        >
+      </div>
+
+      <div class="vv-field">
+        <label>SIDE:</label>
+        <input
+          type="text"
+          name="system.identity.side"
+          value="{{system.identity.side}}"
+        >
+      </div>
+
+      <div class="vv-field vv-span-2">
+        <label>NAME:</label>
+        <input
+          type="text"
+          name="name"
+          value="{{actor.name}}"
+        >
+      </div>
+
+      <div class="vv-field">
+        <label>SEX:</label>
+        <input
+          type="text"
+          name="system.physical.sex"
+          value="{{system.physical.sex}}"
+        >
+      </div>
+
+      <div class="vv-field">
+        <label>AGE:</label>
+        <input
+          type="number"
+          name="system.physical.age"
+          value="{{system.physical.age}}"
+          min="0"
+          step="1"
+        >
+      </div>
+
+      <div class="vv-field">
+        <label>EXPERIENCE:</label>
+        <input
+          type="number"
+          name="system.progression.experience"
+          value="{{system.progression.experience}}"
+          min="0"
+          step="1"
+        >
+      </div>
+
+      <div class="vv-field">
+        <label>LEVEL:</label>
+        <input
+          type="number"
+          name="system.progression.level"
+          value="{{system.progression.level}}"
+          min="1"
+          step="1"
+        >
+      </div>
+
+      <div class="vv-field vv-span-2">
+        <label>TRAINING:</label>
+        <input
+          type="text"
+          name="system.progression.training"
+          value="{{system.progression.training}}"
+        >
+      </div>
+
+      <div class="vv-field">
+        <label>WEIGHT:</label>
+        <input
+          type="number"
+          name="system.physical.weight.base"
+          value="{{system.physical.weight.base}}"
+          min="0"
+          step="1"
+        >
+      </div>
+
+      <div class="vv-static-field">
+        <label>BASIC HITS:</label>
+        <span>—</span>
+      </div>
+
+      <div class="vv-static-field">
+        <label>AGILITY MOD.:</label>
+        <span>—</span>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <p>Villains and Vigilantes Character Sheet</p>
-  </main>
+
+  <section class="vv-powers-section">
+    <h2>POWERS:</h2>
+
+    <div class="vv-powers-placeholder">
+      <!-- Power Items will be rendered here in a later development phase. -->
+    </div>
+  </section>
+
+
+  <section class="vv-three-column-section">
+
+    <div class="vv-column vv-characteristics">
+      <h2>CHARACTERISTICS</h2>
+
+      <div class="vv-stat-row">
+        <label>STRENGTH:</label>
+        <input
+          type="number"
+          name="system.characteristics.strength.base"
+          value="{{system.characteristics.strength.base}}"
+          min="0"
+          step="1"
+        >
+      </div>
+
+      <div class="vv-stat-row">
+        <label>ENDURANCE:</label>
+        <input
+          type="number"
+          name="system.characteristics.endurance.base"
+          value="{{system.characteristics.endurance.base}}"
+          min="0"
+          step="1"
+        >
+      </div>
+
+      <div class="vv-stat-row">
+        <label>AGILITY:</label>
+        <input
+          type="number"
+          name="system.characteristics.agility.base"
+          value="{{system.characteristics.agility.base}}"
+          min="0"
+          step="1"
+        >
+      </div>
+
+      <div class="vv-stat-row">
+        <label>INTELLIGENCE:</label>
+        <input
+          type="number"
+          name="system.characteristics.intelligence.base"
+          value="{{system.characteristics.intelligence.base}}"
+          min="0"
+          step="1"
+        >
+      </div>
+
+      <div class="vv-stat-row">
+        <label>CHARISMA:</label>
+        <input
+          type="number"
+          name="system.characteristics.charisma.base"
+          value="{{system.characteristics.charisma.base}}"
+          min="0"
+          step="1"
+        >
+      </div>
+
+      <div class="vv-subsection">
+        <div class="vv-subsection-title">REACTIONS FROM:</div>
+
+        <div class="vv-static-row">
+          <label>GOOD:</label>
+          <span>—</span>
+        </div>
+
+        <div class="vv-static-row">
+          <label>EVIL:</label>
+          <span>—</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="vv-column vv-combat">
+      <h2>COMBAT / RESOURCES</h2>
+
+      <div class="vv-primary-resource">
+        <div class="vv-primary-resource-title">HIT POINTS</div>
+
+        <div class="vv-resource-values">
+          <div class="vv-resource-value">
+            <label>MAX:</label>
+            <input
+              type="number"
+              name="system.resources.hitPoints.max"
+              value="{{system.resources.hitPoints.max}}"
+              min="0"
+              step="1"
+            >
+          </div>
+
+          <div class="vv-resource-value">
+            <label>CURRENT:</label>
+            <input
+              type="number"
+              name="system.resources.hitPoints.value"
+              value="{{system.resources.hitPoints.value}}"
+              min="0"
+              step="1"
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="vv-primary-resource">
+        <div class="vv-primary-resource-title">POWER</div>
+
+        <div class="vv-resource-values">
+          <div class="vv-resource-value">
+            <label>MAX:</label>
+            <input
+              type="number"
+              name="system.resources.power.max"
+              value="{{system.resources.power.max}}"
+              min="0"
+              step="1"
+            >
+          </div>
+
+          <div class="vv-resource-value">
+            <label>CURRENT:</label>
+            <input
+              type="number"
+              name="system.resources.power.value"
+              value="{{system.resources.power.value}}"
+              min="0"
+              step="1"
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="vv-hit-mod-block">
+        <div class="vv-hit-mod-title">HIT MOD.</div>
+
+        <div class="vv-hit-mod-values">
+          <span>( — )</span>
+          <span>( — )</span>
+          <span>( — )</span>
+          <span>( — )</span>
+          <span>=</span>
+          <strong>—</strong>
+        </div>
+      </div>
+
+      <div class="vv-static-row">
+        <label>DAMAGE MOD.:</label>
+        <span>—</span>
+      </div>
+
+      <div class="vv-static-row">
+        <label>HEALING RATE:</label>
+        <span>—</span>
+      </div>
+
+      <div class="vv-static-row">
+        <label>ACCURACY:</label>
+        <span>—</span>
+      </div>
+
+      <div class="vv-static-row">
+        <label>CARRYING CAPACITY:</label>
+        <span>—</span>
+      </div>
+
+      <div class="vv-static-row">
+        <label>BASIC HTH DAMAGE:</label>
+        <span>—</span>
+      </div>
+    </div>
+
+
+    <div class="vv-column vv-other-stats">
+      <h2>OTHER STATISTICS</h2>
+
+      <div class="vv-movement-block">
+        <label>MOVEMENT RATES:</label>
+
+        <div class="vv-base-movement">
+          <span>—</span>
+        </div>
+
+        <textarea
+          name="system.movement.additional"
+        >{{system.movement.additional}}</textarea>
+      </div>
+
+      <div class="vv-static-row">
+        <label>DET. HIDDEN:</label>
+        <span>—</span>
+      </div>
+
+      <div class="vv-static-row">
+        <label>DET. DANGER:</label>
+        <span>—</span>
+      </div>
+
+      <div class="vv-stat-row">
+        <label>INVENTING POINTS:</label>
+        <input
+          type="number"
+          name="system.resources.inventingPoints"
+          value="{{system.resources.inventingPoints}}"
+          min="0"
+          step="1"
+        >
+      </div>
+
+      <div class="vv-stat-row">
+        <label>CASH: $</label>
+        <input
+          type="number"
+          name="system.resources.cash"
+          value="{{system.resources.cash}}"
+          min="0"
+          step="1"
+        >
+      </div>
+
+      <div class="vv-static-row">
+        <label>INVENTING ( )%:</label>
+        <span>—</span>
+      </div>
+
+      <div class="vv-stat-row">
+        <label>LEGAL STATUS:</label>
+        <input
+          type="text"
+          name="system.status.legalStatus"
+          value="{{system.status.legalStatus}}"
+        >
+      </div>
+
+      <div class="vv-stat-row">
+        <label>SECURITY CLEARANCE:</label>
+        <input
+          type="number"
+          name="system.status.securityClearance"
+          value="{{system.status.securityClearance}}"
+          min="1"
+          max="20"
+          step="1"
+        >
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="vv-large-text-section">
+    <h2>ORIGIN AND BACKGROUND:</h2>
+
+    <textarea
+      name="system.biography.originAndBackground"
+    >{{system.biography.originAndBackground}}</textarea>
+  </section>
+
+
+  <section class="vv-large-text-section">
+    <h2>OTHER INFORMATION:</h2>
+
+    <textarea
+      name="system.biography.otherInformation"
+    >{{system.biography.otherInformation}}</textarea>
+  </section>
+
 </section>
