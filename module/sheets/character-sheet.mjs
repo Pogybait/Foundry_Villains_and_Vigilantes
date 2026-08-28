@@ -5,14 +5,21 @@ export class CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 
   static DEFAULT_OPTIONS = {
     tag: "form",
+
     classes: [
       "villains-and-vigilantes",
       "character-sheet"
     ],
+
     position: {
       width: 1000,
-      height: 920
+      height: 900
     },
+
+    window: {
+      resizable: true
+    },
+
     form: {
       submitOnChange: true,
       closeOnSubmit: false
