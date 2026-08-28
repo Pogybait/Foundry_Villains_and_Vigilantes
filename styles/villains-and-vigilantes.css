@@ -33,7 +33,7 @@
 
 
 /* =========================================================
-   GENERAL INPUTS AND TYPOGRAPHY
+   GENERAL FORM APPEARANCE
    ========================================================= */
 
 .villains-and-vigilantes.character-sheet input,
@@ -55,17 +55,12 @@
 }
 
 .villains-and-vigilantes.character-sheet label,
-.villains-and-vigilantes.character-sheet h2,
+.villains-and-vigilantes.character-sheet .vv-section-title,
+.villains-and-vigilantes.character-sheet .vv-column-title,
 .villains-and-vigilantes.character-sheet .vv-subsection-title,
 .villains-and-vigilantes.character-sheet .vv-primary-resource-title,
 .villains-and-vigilantes.character-sheet .vv-hit-mod-title {
   font-weight: 700;
-  text-transform: uppercase;
-}
-
-.villains-and-vigilantes.character-sheet h2 {
-  margin: 0 0 6px;
-  font-size: 14px;
 }
 
 
@@ -79,18 +74,11 @@
   margin-bottom: 8px;
 }
 
-.villains-and-vigilantes.character-sheet .vv-record-title {
-  margin: 0 0 4px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
 .villains-and-vigilantes.character-sheet .vv-header-visuals {
   display: grid;
   grid-template-columns: 150px 1fr 300px;
   align-items: center;
+  gap: 12px;
   min-height: 145px;
   padding: 4px 8px 8px;
   border-bottom: var(--vv-heavy-line);
@@ -122,6 +110,23 @@
 
 
 /* =========================================================
+   CHARACTER RECORD SHEET TITLE
+   ========================================================= */
+
+.villains-and-vigilantes.character-sheet .vv-record-title {
+  grid-column: 2;
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
    VILLAINS & VIGILANTES LOGO
    ========================================================= */
 
@@ -135,6 +140,7 @@
 .villains-and-vigilantes.character-sheet .vv-logo {
   display: block;
   width: 270px;
+  max-width: 100%;
   max-height: 125px;
   object-fit: contain;
   border: 0;
@@ -186,6 +192,24 @@
 
 
 /* =========================================================
+   MAJOR SECTION TITLES
+   ========================================================= */
+
+.villains-and-vigilantes.character-sheet .vv-section-title {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 8px;
+  padding: 3px 5px 5px;
+  border-bottom: var(--vv-heavy-line);
+  color: var(--vv-black);
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+
+/* =========================================================
    POWERS
    ========================================================= */
 
@@ -194,15 +218,6 @@
   padding: 8px;
   margin-bottom: 8px;
   min-height: 320px;
-}
-
-.villains-and-vigilantes.character-sheet .vv-section-heading {
-  display: block;
-  margin: 0 0 6px;
-  padding-bottom: 4px;
-  border-bottom: var(--vv-line);
-  font-size: 15px;
-  font-weight: 700;
 }
 
 .villains-and-vigilantes.character-sheet .vv-powers-placeholder {
@@ -224,6 +239,19 @@
 .villains-and-vigilantes.character-sheet .vv-column {
   border: var(--vv-heavy-line);
   padding: 8px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-column-title {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 8px;
+  padding: 3px 4px 6px;
+  border-bottom: var(--vv-heavy-line);
+  text-align: center;
+  color: var(--vv-black);
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
 
@@ -403,16 +431,21 @@
 @media (max-width: 800px) {
 
   .villains-and-vigilantes.character-sheet .vv-header-visuals {
-    grid-template-columns: 130px 1fr 240px;
+    grid-template-columns: 120px 1fr 220px;
   }
 
   .villains-and-vigilantes.character-sheet .vv-actor-image,
   .villains-and-vigilantes.character-sheet .vv-actor-image img {
-    width: 115px;
-    height: 115px;
+    width: 110px;
+    height: 110px;
   }
 
   .villains-and-vigilantes.character-sheet .vv-logo {
-    width: 220px;
+    width: 210px;
+  }
+
+  .villains-and-vigilantes.character-sheet .vv-record-title {
+    font-size: 15px;
+    white-space: normal;
   }
 }
