@@ -4,10 +4,18 @@ const { HandlebarsApplicationMixin } = foundry.applications.api;
 export class CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 
   static DEFAULT_OPTIONS = {
-    classes: ["villains-and-vigilantes", "character-sheet"],
+    tag: "form",
+    classes: [
+      "villains-and-vigilantes",
+      "character-sheet"
+    ],
     position: {
-      width: 600,
-      height: 500
+      width: 1000,
+      height: 920
+    },
+    form: {
+      submitOnChange: true,
+      closeOnSubmit: false
     }
   };
 
