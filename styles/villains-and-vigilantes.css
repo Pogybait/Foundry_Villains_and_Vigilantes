@@ -7,17 +7,34 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/* =========================================================
+   FOUNDRY WINDOW AND SCROLLING
+   ========================================================= */
+
 .villains-and-vigilantes.character-sheet .window-content {
   padding: 0;
+  overflow: hidden;
+  min-height: 0;
   background: #ddd7c8;
 }
 
 .villains-and-vigilantes.character-sheet .vv-sheet {
-  min-width: 920px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: 14px;
   background: var(--vv-paper);
   color: var(--vv-black);
 }
+
+
+/* =========================================================
+   GENERAL INPUTS AND TYPOGRAPHY
+   ========================================================= */
 
 .villains-and-vigilantes.character-sheet input,
 .villains-and-vigilantes.character-sheet textarea {
@@ -51,26 +68,82 @@
   font-size: 14px;
 }
 
+
+/* =========================================================
+   CHARACTER RECORD HEADER
+   ========================================================= */
+
 .villains-and-vigilantes.character-sheet .vv-header {
   border: var(--vv-heavy-line);
   padding: 8px;
   margin-bottom: 8px;
 }
 
-.villains-and-vigilantes.character-sheet .vv-logo-row {
-  display: flex;
-  justify-content: center;
+.villains-and-vigilantes.character-sheet .vv-record-title {
+  margin: 0 0 4px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-header-visuals {
+  display: grid;
+  grid-template-columns: 150px 1fr 300px;
   align-items: center;
-  min-height: 78px;
+  min-height: 145px;
+  padding: 4px 8px 8px;
   border-bottom: var(--vv-heavy-line);
   margin-bottom: 8px;
 }
 
-.villains-and-vigilantes.character-sheet .vv-logo-text {
-  font-size: 30px;
-  font-weight: 900;
-  letter-spacing: 2px;
+
+/* =========================================================
+   FOUNDRY ACTOR IMAGE
+   ========================================================= */
+
+.villains-and-vigilantes.character-sheet .vv-actor-image {
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 135px;
+  height: 135px;
 }
+
+.villains-and-vigilantes.character-sheet .vv-actor-image img {
+  display: block;
+  width: 135px;
+  height: 135px;
+  object-fit: cover;
+  border: var(--vv-heavy-line);
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   VILLAINS & VIGILANTES LOGO
+   ========================================================= */
+
+.villains-and-vigilantes.character-sheet .vv-logo-container {
+  grid-column: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.villains-and-vigilantes.character-sheet .vv-logo {
+  display: block;
+  width: 270px;
+  max-height: 125px;
+  object-fit: contain;
+  border: 0;
+}
+
+
+/* =========================================================
+   HEADER DATA FIELDS
+   ========================================================= */
 
 .villains-and-vigilantes.character-sheet .vv-header-grid {
   display: grid;
@@ -94,6 +167,7 @@
 .villains-and-vigilantes.character-sheet .vv-static-field label {
   flex: 0 0 auto;
   font-size: 12px;
+  font-weight: 700;
 }
 
 .villains-and-vigilantes.character-sheet .vv-field input {
@@ -110,6 +184,11 @@
   font-weight: 700;
 }
 
+
+/* =========================================================
+   POWERS
+   ========================================================= */
+
 .villains-and-vigilantes.character-sheet .vv-powers-section {
   border: var(--vv-heavy-line);
   padding: 8px;
@@ -117,9 +196,23 @@
   min-height: 320px;
 }
 
-.villains-and-vigilantes.character-sheet .vv-powers-placeholder {
-  min-height: 285px;
+.villains-and-vigilantes.character-sheet .vv-section-heading {
+  display: block;
+  margin: 0 0 6px;
+  padding-bottom: 4px;
+  border-bottom: var(--vv-line);
+  font-size: 15px;
+  font-weight: 700;
 }
+
+.villains-and-vigilantes.character-sheet .vv-powers-placeholder {
+  min-height: 280px;
+}
+
+
+/* =========================================================
+   THREE-COLUMN STATISTICS AREA
+   ========================================================= */
 
 .villains-and-vigilantes.character-sheet .vv-three-column-section {
   display: grid;
@@ -132,6 +225,11 @@
   border: var(--vv-heavy-line);
   padding: 8px;
 }
+
+
+/* =========================================================
+   STANDARD STAT ROWS
+   ========================================================= */
 
 .villains-and-vigilantes.character-sheet .vv-stat-row,
 .villains-and-vigilantes.character-sheet .vv-static-row {
@@ -160,6 +258,11 @@
   font-weight: 700;
 }
 
+
+/* =========================================================
+   CHARACTERISTICS / REACTIONS
+   ========================================================= */
+
 .villains-and-vigilantes.character-sheet .vv-subsection {
   margin-top: 12px;
   border-top: var(--vv-heavy-line);
@@ -170,6 +273,11 @@
   margin-bottom: 4px;
   font-size: 12px;
 }
+
+
+/* =========================================================
+   PRIMARY COMBAT RESOURCES
+   ========================================================= */
 
 .villains-and-vigilantes.character-sheet .vv-primary-resource {
   border: var(--vv-heavy-line);
@@ -207,6 +315,11 @@
   font-weight: 700;
 }
 
+
+/* =========================================================
+   HIT POINT MODIFIER
+   ========================================================= */
+
 .villains-and-vigilantes.character-sheet .vv-hit-mod-block {
   padding: 8px 0;
   border-bottom: var(--vv-line);
@@ -223,6 +336,11 @@
   gap: 5px;
   font-size: 13px;
 }
+
+
+/* =========================================================
+   MOVEMENT
+   ========================================================= */
 
 .villains-and-vigilantes.character-sheet .vv-movement-block {
   padding-bottom: 8px;
@@ -254,6 +372,11 @@
   resize: vertical;
 }
 
+
+/* =========================================================
+   ORIGIN / BACKGROUND AND OTHER INFORMATION
+   ========================================================= */
+
 .villains-and-vigilantes.character-sheet .vv-large-text-section {
   border: var(--vv-heavy-line);
   padding: 8px;
@@ -262,12 +385,34 @@
 
 .villains-and-vigilantes.character-sheet .vv-large-text-section textarea {
   width: 100%;
-  min-height: 160px;
+  min-height: 180px;
   padding: 6px;
   border: var(--vv-line);
   resize: vertical;
 }
 
 .villains-and-vigilantes.character-sheet .vv-large-text-section:last-child textarea {
-  min-height: 180px;
+  min-height: 200px;
+}
+
+
+/* =========================================================
+   SMALLER WINDOW SAFETY
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .villains-and-vigilantes.character-sheet .vv-header-visuals {
+    grid-template-columns: 130px 1fr 240px;
+  }
+
+  .villains-and-vigilantes.character-sheet .vv-actor-image,
+  .villains-and-vigilantes.character-sheet .vv-actor-image img {
+    width: 115px;
+    height: 115px;
+  }
+
+  .villains-and-vigilantes.character-sheet .vv-logo {
+    width: 220px;
+  }
 }
