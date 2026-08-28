@@ -11,7 +11,7 @@ Hooks.once("init", () => {
 
   CONFIG.Actor.dataModels.character = CharacterData;
 
-  DocumentSheetConfig.registerSheet(
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(
     foundry.documents.Actor,
     game.system.id,
     CharacterSheet,
