@@ -1,1 +1,30 @@
-
+{
+  "id": "villains-and-vigilantes",
+  "title": "Villains and Vigilantes",
+  "description": "A Foundry Virtual Tabletop game system implementation for Villains and Vigilantes.",
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": 14,
+    "verified": 14
+  },
+  "authors": [
+    {
+      "name": "Pogybait",
+      "url": "https://github.com/Pogybait/Foundry_Villains_and_Vigilantes"
+    }
+  ],
+  "esmodules": [
+    "villains-and-vigilantes.mjs"
+  ],
+  "styles": [
+    "styles/villains-and-vigilantes.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "url": "https://github.com/Pogybait/Foundry_Villains_and_Vigilantes"
+}
