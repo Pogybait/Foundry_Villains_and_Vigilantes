@@ -26,5 +26,10 @@
       "path": "lang/en.json"
     }
   ],
+  "documentTypes": {
+  "Actor": {
+    "character": {}
+  }
+},
   "url": "https://github.com/Pogybait/Foundry_Villains_and_Vigilantes"
 }
