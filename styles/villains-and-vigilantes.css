@@ -1,4 +1,273 @@
-/*
- * Villains & Vigilantes Foundry VTT System
- * System stylesheet
- */
+.villains-and-vigilantes.character-sheet {
+  --vv-black: #111;
+  --vv-paper: #f7f4e8;
+  --vv-line: 1px solid #111;
+  --vv-heavy-line: 2px solid #111;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.villains-and-vigilantes.character-sheet .window-content {
+  padding: 0;
+  background: #ddd7c8;
+}
+
+.villains-and-vigilantes.character-sheet .vv-sheet {
+  min-width: 920px;
+  padding: 14px;
+  background: var(--vv-paper);
+  color: var(--vv-black);
+}
+
+.villains-and-vigilantes.character-sheet input,
+.villains-and-vigilantes.character-sheet textarea {
+  box-sizing: border-box;
+  background: transparent;
+  color: var(--vv-black);
+  border: 0;
+  border-bottom: var(--vv-line);
+  border-radius: 0;
+  box-shadow: none;
+  font-family: inherit;
+}
+
+.villains-and-vigilantes.character-sheet input:focus,
+.villains-and-vigilantes.character-sheet textarea:focus {
+  outline: 1px solid #555;
+  box-shadow: none;
+}
+
+.villains-and-vigilantes.character-sheet label,
+.villains-and-vigilantes.character-sheet h2,
+.villains-and-vigilantes.character-sheet .vv-subsection-title,
+.villains-and-vigilantes.character-sheet .vv-primary-resource-title,
+.villains-and-vigilantes.character-sheet .vv-hit-mod-title {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.villains-and-vigilantes.character-sheet h2 {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-header {
+  border: var(--vv-heavy-line);
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-logo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 78px;
+  border-bottom: var(--vv-heavy-line);
+  margin-bottom: 8px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-logo-text {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-header-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px 10px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-span-2 {
+  grid-column: span 2;
+}
+
+.villains-and-vigilantes.character-sheet .vv-field,
+.villains-and-vigilantes.character-sheet .vv-static-field {
+  display: flex;
+  align-items: end;
+  gap: 5px;
+  min-height: 28px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-field label,
+.villains-and-vigilantes.character-sheet .vv-static-field label {
+  flex: 0 0 auto;
+  font-size: 12px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-field input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 24px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-static-field span {
+  flex: 1 1 auto;
+  min-width: 35px;
+  border-bottom: var(--vv-line);
+  text-align: center;
+  font-weight: 700;
+}
+
+.villains-and-vigilantes.character-sheet .vv-powers-section {
+  border: var(--vv-heavy-line);
+  padding: 8px;
+  margin-bottom: 8px;
+  min-height: 320px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-powers-placeholder {
+  min-height: 285px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-three-column-section {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-column {
+  border: var(--vv-heavy-line);
+  padding: 8px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-stat-row,
+.villains-and-vigilantes.character-sheet .vv-static-row {
+  display: grid;
+  grid-template-columns: 1fr 92px;
+  gap: 6px;
+  align-items: center;
+  min-height: 34px;
+  border-bottom: var(--vv-line);
+}
+
+.villains-and-vigilantes.character-sheet .vv-stat-row label,
+.villains-and-vigilantes.character-sheet .vv-static-row label {
+  font-size: 12px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-stat-row input {
+  width: 100%;
+  height: 25px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.villains-and-vigilantes.character-sheet .vv-static-row span {
+  text-align: center;
+  font-weight: 700;
+}
+
+.villains-and-vigilantes.character-sheet .vv-subsection {
+  margin-top: 12px;
+  border-top: var(--vv-heavy-line);
+  padding-top: 8px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-subsection-title {
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-primary-resource {
+  border: var(--vv-heavy-line);
+  padding: 7px;
+  margin-bottom: 10px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-primary-resource-title {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-resource-values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-resource-value {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px;
+  align-items: center;
+}
+
+.villains-and-vigilantes.character-sheet .vv-resource-value label {
+  font-size: 11px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-resource-value input {
+  height: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.villains-and-vigilantes.character-sheet .vv-hit-mod-block {
+  padding: 8px 0;
+  border-bottom: var(--vv-line);
+}
+
+.villains-and-vigilantes.character-sheet .vv-hit-mod-title {
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-hit-mod-values {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 13px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-movement-block {
+  padding-bottom: 8px;
+  margin-bottom: 4px;
+  border-bottom: var(--vv-line);
+}
+
+.villains-and-vigilantes.character-sheet .vv-movement-block label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.villains-and-vigilantes.character-sheet .vv-base-movement {
+  min-height: 25px;
+  margin-bottom: 4px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-base-movement span {
+  font-weight: 700;
+}
+
+.villains-and-vigilantes.character-sheet .vv-movement-block textarea {
+  width: 100%;
+  min-height: 68px;
+  padding: 4px;
+  border: var(--vv-line);
+  resize: vertical;
+}
+
+.villains-and-vigilantes.character-sheet .vv-large-text-section {
+  border: var(--vv-heavy-line);
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.villains-and-vigilantes.character-sheet .vv-large-text-section textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 6px;
+  border: var(--vv-line);
+  resize: vertical;
+}
+
+.villains-and-vigilantes.character-sheet .vv-large-text-section:last-child textarea {
+  min-height: 180px;
+}
